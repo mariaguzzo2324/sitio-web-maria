@@ -50,6 +50,7 @@ header {display:block;}
 .slide:nth-child(1) { background-color: #000000; }
 .slide:nth-child(2) { background-color: #000000; }
 .slide:nth-child(3) { background-color: #000000; }
+.img-slide1{width:  100%} 
  
 .boton-anterior, .boton-siguiente {
   position: absolute;
