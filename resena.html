@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>reseña</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<link rel="stylesheet" href="reseña.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<header> 
+		<a href="index.html"><img class="logo" src="logo.jpeg"> </a>
+		<a href="javascript:void(0);" class="icono" onclick="MiFuncion()">
+  <i class="fa fa-bars" aria-hidden="true"></i>
+</a>
+<nav id="navegador" class="mostrarmenu">
+		<ul>
+			<li><a href="noticias.html"> Noticias</a></li>
+		    <li><a href="reseña.html"> Reseñas</a></li>
+			<li><a href="foro.html"> Foro</a></li>
+			</ul>
+		</nav>
+    </header>
+	<main> 
+		<img class="banner" src="reseña.jpeg">
+		<h2> reseñas: </h2>
+		<p>1. Show de Reels B en el Movistar Arena
+El show de Reels B fue una experiencia súper divertida y llena de energía. Se hizo en el Movistar Arena y reunió a varios creadores de contenido que todos conocemos de redes sociales. Hubo música, humor, coreografías y mucha interacción con el público. Ideal para fans que disfrutan el mundo digital en vivo.</p>
+<p>2. Obra de teatro Matilda en el Teatro Vorterix de Buenos Aires
+La versión teatral de Matilda en el Teatro Vorterix fue mágica. Los actores son muy talentosos, especialmente la niña que hace de Matilda. La escenografía, las canciones y el mensaje de la historia hacen que sea una obra emocionante para grandes y chicos. Perfecta para pasar una tarde distinta en familia.</p>
+<p>3. Nueva actualización del GTA en PlayStation 5
+La nueva actualización de GTA para PS5 trae mejoras en los gráficos, nuevas misiones y más vehículos. Todo se ve más realista y el juego va mucho más fluido. También agregaron opciones nuevas para el modo online, lo que lo hace más entretenido para jugar con amigos.</p>
+<p>4. Nuevo lanzamiento de Blancanieves en el cine
+La nueva película de Blancanieves llegó al cine con una versión moderna del clásico cuento. Los efectos especiales son increíbles, y la historia tiene algunos cambios que la hacen más actual. Es ideal para quienes crecieron con Disney, pero también para una nueva generación de espectadores.</p> 
+	</main>
+	<footer> 
+		<h2> Seguinos en:</h2>
+		<i class="fa fa-instagram" aria-hidden="true"></i>
+		<i class="fa fa-whatsapp" aria-hidden="true"></i>
+		<i class="fa fa-envelope-o" aria-hidden="true"></i>
+	</footer>
+	<script>
+function MiFuncion() {
+  var x = document.getElementById("navegador");
+  if (x.className === "") {
+    // esta es la clase que se agrega al elemento con el
+    id="navegador"
+    x.className += "mostrarmenu";
+    } else {
+    x.className = "";
+    }
+ }
+</script> 
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>foro</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<link rel="stylesheet" href="foro.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<header> 
+		<a href="index.html"><img class="logo" src="logo.jpeg"> </a>
+		<a href="javascript:void(0);" class="icono" onclick="MiFuncion()">
+  <i class="fa fa-bars" aria-hidden="true"></i>
+</a>
+	<nav id="navegador" class="mostrarmenu">
+		<ul>
+			<li><a href="noticias.html"> Noticias</a></li>
+		    <li><a href="reseña.html"> Reseñas</a></li>
+			<li><a href="foro.html"> Foro</a></li>
+			</ul>
+		</nav>
+    </header>
+	<main> 
+		<img class= "personas"  src="personas para foro.jpg">
+		<h2>foro </h2>
+		<p>Tema 1: Show de Reels B en el Movistar Arena
+@lucas_fan21: ¡Estuvo re bueno! Ver a los chicos de las redes en persona fue genial.
+@camilaxd: Me gustó mucho, aunque podrían haber cantado canciones más conocidas.
+@julii_music: Estuvo divertido, pero hubo partes que se hicieron medio largas.</p>
+
+<p>Tema 2: Obra de teatro Matilda en el Teatro Vorterix
+@teatrolover: ¡Hermosa! Me re emocioné, Matilda actuó súper bien.
+@marian_ba: Está buena para los más chicos. Yo pensé que iba a ser más impactante.
+@pablitoescena: Muy bien hecha. La escenografía y los actores son de diez.</p>
+
+<p>Tema 3: Nueva actualización del GTA en PS5
+@franco_gamer: ¡Los gráficos están buenísimos! Se ve mucho mejor que antes.
+@luu_online: Ahora jugar online es más divertido. Me re enganché.
+@juan_critico: Me gustó, pero podrían haber puesto más misiones nuevas.</p>
+
+<p>Tema 4: Nuevo Blancanieves en el cine
+@sofi_cinefilax: Es re linda la peli. Blancanieves es distinta, pero me encantó.
+@vale_disney: Cambiaron varias cosas del cuento, pero igual está buena.
+@nico_no_cine: Prefiero la versión vieja, aunque esta está bien hecha.</p>
+	
+	</main>
+	<footer> 
+		<h2> Seguinos en:</h2>
+		<i class="fa fa-instagram" aria-hidden="true"></i>
+		<i class="fa fa-whatsapp" aria-hidden="true"></i>
+		<i class="fa fa-envelope-o" aria-hidden="true"></i>
+	</footer>
+	<script>
+function MiFuncion() {
+  var x = document.getElementById("navegador");
+  if (x.className === "") {
+    // esta es la clase que se agrega al elemento con el
+    id="navegador"
+    x.className += "mostrarmenu";
+    } else {
+    x.className = "";
+    }
+ }
+</script> 
+</body>
+</html>

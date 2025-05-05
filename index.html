@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>la industria del entretenimiento</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<link rel="stylesheet" href="mari.estilos.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<header> 
+		<a href="index.html"><img class="logo" src="logo.jpeg"> </a>
+		<a href="javascript:void(0);" class="icono" onclick="MiFuncion()">
+  <i class="fa fa-bars" aria-hidden="true"></i>
+</a>
+		<nav id="navegador" class="">
+		<ul>
+			<li><a href="noticias.html"> Noticias</a></li>
+		    <li><a href="reseña.html"> Reseñas</a></li>
+			<li><a href="foro.html"> Foro</a></li>
+			</ul>
+		</nav>
+    </header>
+	<main> 
+	<img class="banner" src="bannerr.jpeg">
+ <div class="cajacontenedora">
+	 <div class= "caja1">
+			<img src="cine2.jpeg" class="imgcaja">
+	 </div>
+			<div class="caja2">
+		<img src="videojuegos1.jpeg" class="imgcaja">
+		
+	 </div>
+	<div class="caja3">
+			<img src="teatro 1.jpeg" class="imgcaja">
+	</div>
+</div>
+		<div class="caja4">
+			<img src="conciertos 2.jpeg" class="imgcaja">
+	</div>
+	</main>
+	<footer> 
+		<h2> Seguinos en:</h2>
+		<i class="fa fa-instagram" aria-hidden="true"></i>
+		<i class="fa fa-whatsapp" aria-hidden="true"></i>
+		<i class="fa fa-envelope-o" aria-hidden="true"></i>
+	</footer>
+	<script>
+function MiFuncion() {
+  var x = document.getElementById("navegador");
+  if (x.className === "") {
+
+    id="navegador"
+    x.className += "mostrarmenu";
+    } else {
+    x.className = "";
+    }
+ }
+</script> 
+</body>
+</html>

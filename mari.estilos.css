@@ -1,0 +1,38 @@
+*{ margin:0}
+body { background-color: #FFFFFF; font-family:  Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif'}
+header {background-color:#0E0D0D; display:flex; align-content: center; justify-content: space-between; align-items: center; padding: 10px; font-size: 28px ;}
+nav ul li {list-style: none; text-decoration: none; display: inline; padding: 30px; align:left}
+.logo { width: 150px; vertical-align: middle}
+.logo2{width:30px}
+.logo3{width:40px}
+.logo4{width: 40px}
+.fa-envelope-o{width: 50px;position:absolute; top: 10px; right: 10px}
+.banner {width: 100%;}
+.cajacontenedora {display: flex;justify-content: space-between; width: 100%; flex-flow: wrap}
+.caja1 { width: 33.1%; background-color: #fff; border:1px ; box-sizing: border-box;display: flex;flex-direction: column;}
+.caja2 {width: 33.1%;background-color: #fff; border:1px ; box-sizing: border-box;display: flex;flex-direction: column;}
+.caja3 { width: 33.1%; background-color: #fff; border:1px ; box-sizing: border-box;display: flex;flex-direction: column;}
+.caja4 { width: 33.1%; background-color: #fff; border:1px ; box-sizing: border-box;display: flex;flex-direction: column;}
+.imgcaja {width:100%}
+footer {background-color: white; font-size: 10px}
+nav ul a {  color:#FFFFFF; text-decoration: none; display: inline-block; padding: 10px}
+@media (max-width: 1024px) {
+}
+header {display:block;}
+    nav ul {justify-content: center} 
+.banner{width: 100%}
+/* Smartphone 480px */
+@media (max-width: 480px) {
+nav ul {display:block; text-align: center}
+    nav { display:none}
+    .icono {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white; 
+}
+    .mostrarmenu { display:block}
+.banner{width: 100%}
+}
+
