@@ -8,7 +8,9 @@ nav ul li {list-style: none; text-decoration: none; display: inline; padding: 30
 .logo4{width: 40px}
 .fa-envelope-o{width: 50px}
 .banner {width: 100%;}
+.icono{display:none}
 footer {background-color: white; font-size: 10px}
+
 nav ul a {  color:#FFFFFF; text-decoration: none; display: inline-block; padding: 10px}
 /* Desktop 1600px */
 @media (max-width: 1024px) {
@@ -21,12 +23,8 @@ header {display:block;}
 }
 nav ul {display:block; text-align: center}
     nav { display:none}
-   .icono {
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: white; 
+   .icono{displayblock; color:whithe}
+nav ul {display:block; text-align: center}
+    nav { display:none} 
 }
     .mostrarmenu { display:block}
-.banner{width: 100%}

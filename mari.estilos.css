@@ -1,4 +1,4 @@
-*{ margin:0}
+  *{ margin:0}
 body { background-color: #FFFFFF; font-family:  Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif'}
 header {background-color:#0E0D0D; display:flex; align-content: center; justify-content: space-between; align-items: center; padding: 10px; font-size: 28px ;}
 nav ul li {list-style: none; text-decoration: none; display: inline; padding: 30px; align:left}
@@ -12,27 +12,20 @@ nav ul li {list-style: none; text-decoration: none; display: inline; padding: 30
 .caja1 { width: 33.1%; background-color: #fff; border:1px ; box-sizing: border-box;display: flex;flex-direction: column;}
 .caja2 {width: 33.1%;background-color: #fff; border:1px ; box-sizing: border-box;display: flex;flex-direction: column;}
 .caja3 { width: 33.1%; background-color: #fff; border:1px ; box-sizing: border-box;display: flex;flex-direction: column;}
-.caja4 { width: 33.1%; background-color: #fff; border:1px ; box-sizing: border-box;display: flex;flex-direction: column;}
+.caja4 { width: 33.1%; background-color: #fff; border-top:5px solid white; box-sizing: border-box;display: flex;flex-direction: column;}
 .imgcaja {width:100%}
 footer {background-color: white; font-size: 10px}
 nav ul a {  color:#FFFFFF; text-decoration: none; display: inline-block; padding: 10px}
-@media (max-width: 1024px) {
-}
+.icono{display:none}
 header {display:block;}
     nav ul {justify-content: center} 
 .banner{width: 100%}
 /* Smartphone 480px */
 @media (max-width: 480px) {
+	.icono{display: block; color:white; float: right}
 nav ul {display:block; text-align: center}
-    nav { display:none}
-    .icono {
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: white; 
-}
-    .mostrarmenu { display:block}
+    nav { display:none} 
+    .mostrarmenu { display:block; color: white}
 .banner{width: 100%}
 }
 
