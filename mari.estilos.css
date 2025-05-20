@@ -91,6 +91,7 @@ nav ul {display:block; text-align: center}
 .caja3 { width: 50%; background-color: #fff; border:1px ; box-sizing: border-box;display: flex;flex-direction: column;}
 .caja4 { width: 50%; background-color: #fff; box-sizing: border-box;display: flex;flex-direction: column;}
 	nav ul a {display:block}
+	iframe{width: 300px;height: 600px}
 }
 
 
