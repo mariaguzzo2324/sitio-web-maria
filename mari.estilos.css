@@ -79,6 +79,7 @@ p {max-width: 900px; margin:auto}
   opacity: 0.5;
   cursor: not-allowed;
 }
+iframe {width: 728px; height: 90px}
 /* Smartphone 480px */
 @media (max-width: 480px) {
 	.icono{display: block; color:white; float: right}

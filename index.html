@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>la industria del entretenimiento</title>
+	<link rel="stylesheet" href="css/lightbox.min.css"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <link rel="stylesheet" href="mari.estilos.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -40,22 +41,26 @@
 	<img class="banner" src="bannerr.jpeg">
  <div class="cajacontenedora">
 	 <div class= "caja1">
-			<img src="cine2.jpg" class="imgcaja">
+			<a href= "cine2.jpg" data-lightbox="photo"><img src="cine2.400px.jpg" class="imgcaja"></a>
 	 </div>
 			<div class="caja2">
-		<img src="videojuegos1.jpeg" class="imgcaja">   
+		<a href= "videojuegos1.jpeg" data-lightbox="photo"><img src="videojuegos1.400px.jpg" class="imgcaja"></a>
 		
 	 </div>
 	<div class="caja3">
-			<img src="teatro1.jpg" class="imgcaja">
+			<a href= "teatro1.jpg" data-lightbox="photo"><img src="teatro1.400px.jpg" class="imgcaja"></a>
 	</div>
 		<div class="caja4">
-			<img src="conciertos2.jpg" class="imgcaja">
+			<a href= "conciertos2.jpg" data-lightbox="photo"><img src="conciertos2.400px.jpg" class="imgcaja"></a>
 			</div> 
 	</div>
 	</main>
 	<iframe src="https://mica-martinez-de-ibarreta.github.io/Fabrica-de-pastas/anuncio"
-width="100%" name="marco"
+name="marco"
+frameborder="0"
+scrolling="no"></iframe> 
+	<iframe src="https://matucowes2025.github.io/anuncio.MTHW/"
+ name="marco"
 frameborder="0"
 scrolling="no"></iframe> 
 	<footer> 
@@ -115,5 +120,6 @@ function MiFuncion() {
     actualizarSlider();
 });
 </script>
+	<script src="js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>
