@@ -1,0 +1,545 @@
+   <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentación Final</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+    .slider {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100vw;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .slide h1, .slide h2, .slide p {
+      margin-bottom: 20px;
+      max-width: 800px;
+      background-color: rgba(0,0,0,0.5);
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .navegacion {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 20px;
+    }
+
+    .btn {
+      background-color: rgba(0,0,0,0.6);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 24px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    a.boton-link {
+      background: #CE3428;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 10px;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .slide h1, .slide h2, .slide p {
+        font-size: 16px;
+        padding: 8px;
+      }
+      .btn {
+        font-size: 20px;
+        padding: 8px 16px;
+      }
+    }
+	  @media (max-width: 480px) {
+  .slide {
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .slide h1, .slide h2, .slide p {
+    font-size: 14px;
+    padding: 6px;
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    font-size: 18px;
+    padding: 6px 12px;
+  }
+
+  .intro-content {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .intro-slide img {
+    max-width: 80%;
+  }
+
+  .pantalla5-titulo {
+    font-size: 2em;
+  }
+
+  .pantalla5-lista li {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+
+  .pantalla5-subtotal {
+    font-size: 1.2em;
+  }
+
+  .lista-secciones li {
+    font-size: 1.3em;
+  }
+
+  .icono {
+    width: 40px;
+  }
+
+  .icono-top-left,
+  .icono-top-right {
+    top: 10px;
+  }
+
+  .icono-bottom-left,
+  .icono-bottom-right {
+    bottom: 40px;
+  }
+
+  .logo-grande {
+    width: 200px;
+  }
+
+  .titulo-presentacion {
+    font-size: 2em;
+  }
+
+  .intro-slide h1 {
+    font-size: 1.8em;
+  }
+}
+
+	  .contenido-presentacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+.titulo-presentacion {
+  color: white;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  background: none;
+  padding: 0;
+}
+
+.logo-grande {
+  width: 300px;
+  max-width: 90vw;
+  height: auto;
+}
+.intro-slide h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  background: none;
+  font-size: 50px; 
+  font-weight: bold;
+}
+
+.intro-slide .pregunta {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.intro-slide .pregunta::before {
+  content: "→";
+  margin-right: 10px;
+  color: #fff;
+}
+
+.intro-slide .respuesta {
+  margin-bottom: 20px;
+}
+
+.intro-slide img {
+  max-width: 40%;
+  border-radius: 10px;
+}
+
+.intro-content {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.intro-text {
+  flex: 1;
+}
+	  .titulo-slide {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 30px;
+  color: white;
+  background: none;
+}
+
+.lista-secciones {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.lista-secciones li {
+  font-size: 2em;
+  margin: 15px 0;
+  color: white;
+}
+
+.icono {
+  width: 70px;
+  height: auto;
+  position: absolute;
+}
+
+.icono-top-left {
+  top: 10px;      /* lo subimos bien arriba */
+  left: 60px;
+}
+
+.icono-top-right {
+  top: 10px;      /* lo subimos bien arriba */
+  right: 60px;
+}
+
+.icono-bottom-left {
+  bottom: 120px;
+  left: 60px;
+}
+
+.icono-bottom-right {
+  bottom: 120px;
+  right: 60px;
+}
+.titulo-sin-fondo {
+  background: none !important;
+  padding: 0 !important;
+}
+	  .pantalla5 {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.pantalla5-titulo {
+  font-size: 3em;
+  margin-bottom: 40px;
+  background: none;
+  padding: 0;
+  color: white;
+}
+
+.pantalla5-lista {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  color: white;
+  text-align: left;
+}
+
+.pantalla5-lista li {
+  font-size: 1.4em;
+  margin-bottom: 30px;
+}
+
+.pantalla5-lista li::before {
+  content: "→ ";
+  color: white;
+  margin-right: 6px;
+}
+
+.pantalla5-subtotal {
+  font-size: 1.6em;
+  margin-top: 20px;
+  color: white;
+  background: none;
+}
+
+@media (max-width: 480px) {
+  .slide {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .slide h1, .slide h2, .slide p {
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .pantalla5-titulo {
+    font-size: 2em;
+  }
+
+  .pantalla5-lista li {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+
+  .pantalla5-subtotal {
+    font-size: 1.2em;
+  }
+
+  .lista-secciones li {
+    font-size: 1.3em;
+  }
+
+  .icono {
+    width: 40px;
+  }
+
+  .icono-top-left,
+  .icono-top-right {
+    top: 10px;
+  }
+
+  .icono-bottom-left,
+  .icono-bottom-right {
+    bottom: 40px;
+  }
+
+  .logo-grande {
+    width: 180px;
+  }
+
+  .titulo-presentacion {
+    font-size: 2em;
+  }
+
+  .intro-slide h1 {
+    font-size: 1.6em;
+  }
+
+  .intro-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .intro-slide img {
+    max-width: 80%;
+  }
+
+  .btn {
+    font-size: 18px;
+    padding: 6px 12px;
+  }
+
+  .boton-link {
+    font-size: 1em !important;
+    padding: 8px 16px !important;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="slider" id="slider">
+    <div class="slide" style="background-image: url('industria entretenimiento.jpg'); display: flex; align-items: center; justify-content: center;">
+  <h1 style="color: #CE3428; background: none; font-size: 4rem; text-align: center;">LA INDUSTRIA DEL ENTRETENIMIENTO</h1>
+</div> 
+    <div class="slide" style="background-color: #000;">
+  <div class="contenido-presentacion">
+    <h1 class="titulo-presentacion">Presentación personal</h1>
+    <img src="imagen de logo.jpg" alt="Logo Entretenimiento" class="logo-grande">
+  </div>
+</div>
+
+    <div class="slide intro-slide" style="background-color: #012F3D;">
+  <h1>Introducción</h1>
+  <div class="intro-content">
+    <div class="intro-text">
+      <div class="pregunta">¿Por qué elegí hacer este sitio?</div>
+      <div class="respuesta">
+        Elegí esta temática porque me parece divertida y cercana a lo que vivimos todos los días. El entretenimiento es algo que disfrutamos en nuestro tiempo libre y siempre hay algo nuevo para descubrir.
+      </div>
+
+      <div class="pregunta">¿De qué trata y qué lo hace especial?</div>
+      <div class="respuesta">
+        El sitio trata sobre cine, teatro, videojuegos y shows en vivo. Lo que lo hace especial es que junta todo en un mismo lugar, con noticias, reseñas, foros para debatir y recomendaciones para no perderse nada.
+      </div>
+
+      <div class="pregunta">¿Para quién está pensado este sitio y por qué puede interesarle a los jóvenes?</div>
+      <div class="respuesta">
+        Está pensado para jóvenes como nosotros, que usamos mucho las redes, el celular y buscamos contenido rápido, visual y actualizado.
+      </div>
+    </div>
+    <img src="imaguen de introduccion (videojuegos) .jpg" alt="Chico con casco VR en escritorio">
+  </div>
+</div>
+
+   <div class="slide" style="background-color: #012F3D; position: relative;">
+  <h1 class="titulo-slide titulo-sin-fondo">Estructura del sitio web</h1>
+  <ul class="lista-secciones">
+    <li>→ Home</li>
+    <li>→ Noticias</li>
+    <li>→ Reseñas</li>
+    <li>→ Foro</li>
+    <li>→ Suscribite</li>
+  </ul>
+
+  <div class="iconos" style="position: relative;">
+    <img src="icono.popcorn.png" class="icono icono-top-left" alt="">
+    <img src="icono.yoistick.png" class="icono icono-top-right" alt="">
+    <img src="icono.musica.png" class="icono icono-bottom-left" alt="">
+    <img src="icono.teatro.png" class="icono icono-bottom-right" alt="">
+  </div>
+</div>
+	  <div class="slide pantalla5" style="background-image: url('marco.pantalla5.jpg');">
+  <h1 class="pantalla5-titulo">Diseño de Información</h1>
+  <ul class="pantalla5-lista">
+    <li>→ Investigación y planificación: Objetivos, público y competencia<br><strong>$12.000</strong></li>
+    <li>→ Mapeo del sitio y wireframes: Creación de esquemas de navegación y distribución de contenido<br><strong>$10.000</strong></li>
+    <li>→ Redacción de contenidos optimizados: Textos pensados para buscadores y buena experiencia del usuario<br><strong>$8.000</strong></li>
+  </ul>
+  <p class="pantalla5-subtotal">Subtotal: <strong>$30.000</strong></p>
+</div>
+
+   <div class="slide pantalla5" style="background-image: url('marco.pantalla5.jpg');">
+  <h1 class="pantalla5-titulo">Diseño Visual (UI/UX)</h1>
+  <ul class="pantalla5-lista">
+    <li>→ Identidad visual: logo, paleta de colores, tipografías<br><strong>$12.000</strong></li>
+    <li>→ Prototipado: versiones preliminares para validar al diseño<br><strong>$6.000</strong></li>
+    <li>→ Diseño responsivo: Adaptación a computadoras, tablets y celulares<br><strong>$9.000</strong></li>
+  </ul>
+  <p class="pantalla5-subtotal">Subtotal: <strong>$27.000</strong></p>
+</div>
+
+    <div class="slide pantalla5" style="background-image: url('marco.pantalla5.jpg');">
+  <h1 class="pantalla5-titulo">Desarrollo Web (HTML, CSS y JavaScript)</h1>
+  <ul class="pantalla5-lista">
+    <li>→ Maquetación HTML y CSS: Construcción de la estructura y estilos del sitio<br><strong>$18.000</strong></li>
+    <li>→ Integración de JavaScript: Funcionalidades dinámicas (formulario, menú, slider, etc)<br><strong>$10.000</strong></li>
+    <li>→ Optimización técnica: SEO, accesibilidad, velocidad de carga<br><strong>$7.000</strong></li>
+  </ul>
+  <p class="pantalla5-subtotal">Subtotal: <strong>$35.000</strong></p>
+</div>
+
+    <div class="slide pantalla5" style="background-image: url('marco.pantalla5.jpg');">
+  <h1 class="pantalla5-titulo">Hosting y publicación online</h1>
+  <ul class="pantalla5-lista">
+    <li>→ Dominio web anual: Dirección web<br><strong>$5.000/año</strong></li>
+    <li>→ Servicio de hosting mensual: Almacenamiento, seguridad, soporte técnico<br><strong>$2.500/mes</strong></li>
+  </ul>
+  <p class="pantalla5-subtotal">Subtotal: <strong>$35.000/año</strong></p>
+</div>
+
+   <div class="slide" style="background-image: url('imagen.conclusion.jpg'); background-size: cover; background-position: center; color: black; text-align: center;">
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; padding: 40px;">
+    
+    <h1 class="pantalla5-titulo" style="color: black;">Conclusión</h1>
+
+    <a href="https://mariaguzzo2324.github.io/sitio-web-maria/index.html" target="_blank" style="
+      margin-top: 40px;
+      font-size: 1.8em;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: 2px solid black;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    " onmouseover="this.style.backgroundColor='#000'; this.style.color='white'; this.style.transform='scale(1.1)';"
+      onmouseout="this.style.backgroundColor='transparent'; this.style.color='black'; this.style.transform='scale(1)';">
+      ➜ Sitio Web
+    </a>
+
+  </div>
+</div>
+</div>
+  <div class="navegacion">
+    <button class="btn" onclick="anterior()">&#10094;</button>
+    <button class="btn" onclick="siguiente()">&#10095;</button>
+  </div>
+
+    <script>
+    const slider = document.getElementById('slider');
+    const slides = Array.from(slider.children).filter(el => el.classList.contains('slide'));
+    let index = 0;
+
+    function mostrarSlide() {
+      slider.style.transform = `translateX(-${index * 100}vw)`;
+    }
+
+    function siguiente() {
+      if (index < slides.length - 1) {
+        index++;
+        mostrarSlide();
+      }
+    }
+
+    function anterior() {
+      if (index > 0) {
+        index--;
+        mostrarSlide();
+      }
+    }
+  </script>
+
+</body>
+</html>
